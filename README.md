@@ -1,6 +1,6 @@
 # University_Projects
 🇫🇷 Ceci est mon répertoire qui contient tous les projets que j'ai pu réaliser durant mon parcours académique.     
-🇬🇧 🇺🇸 This is my repository which contains all the projects that I worked on during my IT scholarship. 
+🇬🇧 🇺🇸 This is my repository which contains all the projects that I worked on during my IT curriculum. 
 
 # Création de base de données / Database creation 
 🇫🇷  Projet concernant la création d'une base de données pour un site de vidéos en ligne (YouTube est l'exemple pris durant ce projet) :
