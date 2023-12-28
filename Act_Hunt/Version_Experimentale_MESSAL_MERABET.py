@@ -62,7 +62,7 @@ def naissanceProie (pro_age, pro_obj):
     Sortie : apparition de nouvelles proies 
     """
     ligne, colonne = randint (0,NB_CASE_Y - 1),randint (0, NB_CASE_X - 1)
-    if pro_obj[(ligne,colonne)] != None:
+    if pro_obj[(ligne,colonne)] is not None:
         return None
     y,x = convertPixels(ligne,colonne)
     proie = g.dessinerDisque(x, y, CARRE/3, 'green')
@@ -79,9 +79,9 @@ def depla_une_Proie(ligne,colonne, pro_age, pro_obj):
     """
     direct = randint(0, len(DIRECTIONS)-1)        
     ligne2, colonne2 = ligne + DIRECTIONS[direct][0],  colonne+DIRECTIONS[direct][1]
-    if case_est_valide(ligne2, colonne2) == False:    
+    if case_est_valide(ligne2, colonne2) is False:    
         return 
-    if pro_obj[(ligne2, colonne2)] != None:    
+    if pro_obj[(ligne2, colonne2)] is not None:    
         return 
     y1, x1 = convertPixels(ligne, colonne)    
     y2, x2 = convertPixels(ligne2, colonne2)
@@ -102,7 +102,7 @@ def deplaProies(pro_age, pro_obj):
     """
     for ligne in range(NB_CASE_X):
         for colonne in range(NB_CASE_Y):
-            if pro_obj[ligne, colonne] != None:
+            if pro_obj[ligne, colonne] is not None:
                 depla_une_Proie(ligne,colonne, pro_age, pro_obj)
 
 def case_est_valide(ligne,colonne):
@@ -141,7 +141,7 @@ def apparitionPredateur (pred_energy, pred_obj):
     Sortie : apparition de nouvelles prédateurs 
     """
     ligne, colonne = randint (0,NB_CASE_Y - 1),randint (0, NB_CASE_X - 1)
-    if pred_obj[(ligne,colonne)] != None:
+    if pred_obj[(ligne,colonne)] is not None:
         return None
     y,x = convertPixels(ligne,colonne)
     pred = g.dessinerDisque(x, y, CARRE/3, 'red')
@@ -217,7 +217,7 @@ while TOUR < NB_TOUR :
     TOUR += 1
 print(pro_age)
 
-while g.recupererClic() == None:
+while g.recupererClic() is None:
     continue
 g.fermerFenetre()
 
