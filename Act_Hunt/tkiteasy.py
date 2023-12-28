@@ -134,7 +134,8 @@ class Canevas(tk.Canvas):
     def fermerFenetre(self):
         self.master.destroy()
             
-    def pause(self, sleeptime=0.0005):
+    @staticmethod
+    def pause(sleeptime=0.0005):
         sleep(sleeptime)
 
 
